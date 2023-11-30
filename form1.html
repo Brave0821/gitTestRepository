@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>form1</title>
+</head>
+<body>
+    <hr>
+    <h1>form 연습(검색)</h1>
+    <!-- id calss css jsvascript를 위해서 명칭 적용 -->
+    <!-- from의 양식들을 구분하기 위해 이름을 적을 때는 
+    action 주소로 전송되는 개념의 서버와 연관되는 속성명을 작성해야한다. -->
+    <from action="#" method="get" id="search_Frm">
+        <fieldset>
+            <legend>검색양식</legend> 
+            <!-- action 구분 값 주려고 name-> 애가 뭐하는 친구인지 검색창인지 - > 검색어가 search_txt 라고 전달되기에  -->
+            <input type="search" placeholder="검색어를 입력하세요" name="search_txt"  class="search_txt" autocomplete="on"> <!-- class는 js와css 동적  autocomplete="on" 자동완성 -->
+        </fieldset>
+    </from>  <!-- get 검색창   -->
+    <hr>
+    <h1>form 연습(로그인)</h1>
+    <form action="#" method="post" id="search_Frm"> <!-- 용도에 맞게 id -->
+        <fieldset>
+            <legend>로그인양식</legend>
+            <span>아이디 :</span>
+            <input type="text" name="user_id" class="user_id" placeholder="아이디" >
+            <br>
+            <span>비밀번호 :</span>
+            <input type="password" name="user_pwd" class="user_pwd" placeholder="비밀번호"> 
+            <br>
+            <span>자동완성</span> <!-- 글자 눌렀을시 체크 -->
+            <label><input type="checkbox" name="auto_complete_chk" value="auto_complete_id">아이디</label> <!-- 체크도 저장을 위해서 value 값 넣어야함. 2개의 체크박스가 자동완성으로 묶여있다는 것을 name로 나타내야한다. input 선택양식의 경우 - > name 속성은 그룹명으로 사용된다. 
+            input 선택양식의 경우 value 속성은 선택 값 전달용으로 사용한다.-->
+            <label><input type="checkbox" name="auto_complete_chk" value="auto_complete_pw">비밀번호</label>
+
+        </fieldset>
+    </form>
+    <hr>
+    <h1>form 연습(회원가입)</h1>
+    <form action="#" method="post" id="joinFrm">
+        <fieldset>
+            <legend>회원가입</legend>
+            <span>이름 :</span>
+            <input type="text" name="user_name" class="user_name" placeholder="이름입력">
+            <br>
+            <span>주민등록번호 :</span>
+            <input type="text" name="regident_first" class="regident" maxlength="6">
+            <input type="text" name="regident_last" class="regident" maxlength="1" >
+            <input type="text" name="regident_hide" class="regident_hide"
+                vlaue="******" readonly disabled>
+            <!-- <input type="text" name="my_number_front" class="my_number_front" placeholder="앞자리" maxlength="6">
+            -
+            <input type="password" name="my_number_back" class="my_number_back" placeholder="뒷자리"maxlength="7"> -->
+            <br>
+            <hr>
+            <span>성별 : </span>
+            <label><input type="radio" name="gender" value="male">남</label>
+            <label><input type="radio" name="gender" value="female">여</label>
+            <label><input type="radio" name="gender" value="none">공개안함</label> <!-- 그룹을 묶어야 하나만 선택된다. name -->
+            <br>
+            <hr>
+            <span type="radio" name="join_path" valul="join">가입경로 :</span>
+            <span><input type="radio" name="join_path" value="friend">지인추천</span>    
+            <span><input type="radio" name="join_path" value="sns_path">sns경로</span>
+            <span><input type="radio" name="join_path" value="etc">기타</span>
+            <br>
+            <hr>
+            <span>사진 업로드(이미지만 첨부가능)</span> <!-- jpg만 업로드 가능합니다. accept="image/jpg  * - > 전부라는 의미-->
+            <input type="file" name="user_photo" accept="image/*">
+            <!-- accept=application/pdf  -->
+            <br>
+            <input type="submit"> <!-- 제출 확인 로그인 결제 등 위에 action에 서버로   -->
+            <input type="reset">    <!-- 초기화  삭제, 취소 등 서버업로드 취소기능-->
+            <input type="button">    <!-- 자유버튼 범용기능 원하는 용도로 자유롭게 사용할 수 있다. 범용 스크립트 이용 직접 명령어 지정 시 자유로운 사용 가가능 ex) 이전, 다음 이동, 우편번호검색 등 -->
+            <!-- 버튼 사용 시 input ㅐㄱ  -->
+            <hr>    
+            <button type="submit" id="btn_join">회원가입</button> <!-- 디자인을 위해서 id를 넣는다. -->
+            <button type="reset" id="btn_joincancel">가입취소</button>
+            <button type="button" id="btn_up">위로 이동</button>
+        </fieldset>
+    </form>
+    <hr>
+    <h1>form 연습(설문조사)</h1>
+    <!-- 설문조사 이름 칸 만들기. get써도 됨 설문조사라 공개가능한 정보 -->
+    <form action="#" method="post" id="surveyFrm">
+        <fieldset>
+            <legend>설문조사</legend>
+            <span>이름 :</span>
+            <input type="text" name="survey_name" class="survey_name" placeholder="이름입력">
+            <br>
+            <span>나이 : (필수입력)</span>
+            <input type="number" required name="survey_age" class="survey_age">
+        </fieldset>
+    </form>
+    <hr>
+</body>
+</html>
+
+
+<!-- <필기>
+    disabled - > 비활성화
+    required - > 나이 올리고 내리기 
+    lable - > 안에다 넣는 방식으로 
+
+    같은 abc라도 name 값으로 구분을 위해 
+    from에 name 값을 준다.
+    action에 서버에서 
+
+    value="검색어를 입력하세요"보단 -> 
+    남자 여자 선택 등등 내국인 외국인 아이디 저장 value 사용자 입력 정보 매번 초기값
+
+    <form의 개념> 
+    value는 input의 초기값 개념으로 사용한다. - > ex abc로 로그인시 다음 로그인 초기값 abc 
+
+    value는 로그인 시 아이디 저장 또는 자동 로그인 설정 시 저장되는 값으로 인식된다.
+
+    value는 사용자가 input에 직접 값을 입력 시 사용자의 입력값을 인식하는 속성으로도 사용한다.
+    EX) 사용자가 아이디칸에 abc 라고 쓴 경우
+    
+    -> 아이디의 abc value가 action 서버의 저장값과 일치하는가?
+    ->로그인 성공 또는 실패 결과 도출
+
+
+체크도 저장을 위해서 value 값 넣어야함. 2개의 체크박스가 자동완성으로 묶여있다는 것을 name로 나타내야한다. input 선택양식의 경우 - > name 속성은 그룹명으로 사용된다. 
+            input 선택양식의 경우 value 속성은 선택 값 전달용으로 사용한다.-->
+
+
+<!-- value 서술형 해설
+
+    vs를 txt 검색창에 검색해서  
+    vs에 대한 결과 값이 나왔다.
+    vs를 서버에서 조회하여 vs라는 단어가 저장되는 값 인식되어 해당 결과 값이 불러온다.
+    그렇므로 초기값은 vs이다.?
+-> 
+<과정>
+form 사용자가 입력한 - > value 값 - > action 전송 -> 검색결과 화면에 출력 
+
+검색창 및 텍스트 창에 ㅇㅇ 라고 검색하면 - > form은 ㅇㅇ 라는 입력한 value 값 - > action 전송 -> 검색결과 화면에 출력
+<tr> - > 1행 
+    <td> - > 열 
+<tr> - > 1행
+
+-->
+
