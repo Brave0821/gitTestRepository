@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>list</title>
+</head>
+<body>
+    <!-- 시작! -->
+    <h1>순서가 있는 목록!</h1>
+    <!-- ol ul li는 모두 block 태그이다. 그래서 h1 옆에 놓는게 가능 -->
+    <ol><!--1 ol의 자식으로는 li 태그만 쓸 수 있다. (단순 글자 및 이미지 모두 불가능)-->
+        <li>1위ㅇㅇㅇ</li> <!--2 2개이상 만들고 밑으로 복제 li태그 자식은 블록 인라인 모두 삽입 가능하다.-->
+        <li>2위ㅁㅁㅁ</li>
+        <li>3위ㄴㄴㄴ</li>
+        <li>4위ㅊㅊㅊ</li> 
+        <li>5위ㄹㄹㄹ</li>
+    </ol><!--1 끝-->
+
+    <h1>순서가 없는 목록 만들기!</h1>
+    <ul><!--1 네이버 메인 뉴스 목록
+    네이버 메인 상품목록  왼쪽 - > 오른쪽으로 <br>로 내림 -->
+        <li>장바구니 목록 : ㅇㅇ</li> <!--2 2개이상 만들고 밑으로 복제-->
+        <li>장바구니 목록 : ㄴㄴ</li>
+        <li>장바구니 목록 : ㅇㅇㅇ</li>
+    </ul><!--1 끝-->
+    
+    <!-- ol ul 중 웹사이트 레이아웃으로 ul을 많이 쓰는 이유 
+    ul은 비순서 목록 (순서가 없다.)으로 단순 2개 이상의 배치 
+    레이아웃에 활용되기 때문이다.  -->
+    <!--shift + alt + a  선택한 영역 주석 -->
+    <hr>
+    <a href="#"><img src="#" alt="만개의레시피">만개의 레시피</a>
+    <h1>입안을 가득채우는 부드러운 마스카포네크림, 딸기마스카포네크림빵</h1>
+    <p>빵 사이에 마스카포네 치즈크림이 한가득<br>
+        한입 베어물면 느껴지는 부드러움이<br>
+        입을 즐겁게 만들어줘요!</p>
+    <ul>
+        <li><img src="#" alt="5인분">5인분</li>
+        <li><img src="#" alt="2시간 이상">2시간이상</li>
+        <li><img src="#" alt="초급">초급</li>
+    </ul>
+    <hr>
+    <!-- 재료 시작!  -->
+    <!-- <p><a href ="#"></a>계량법 안내</p> -->
+    <div class="recipe_ingredients">
+        <h1>재료<span>Ingredients</span></h1>
+        <a href="#">계량법 안내</a>
+    </div> <!-- 한 줄에 2개 이상이면 그룹 묶기 <div> -->
+    <!-- h안에는 span -->
+    <div class="ingredients_container_">
+        <section class="ingredients">
+            <h3>[재료]</h3>
+            <ul> 
+                <li>
+                    <a href="#">밀가루강력분<img src="#" alt="상세보기"></a>
+                    <span class="right">270g<a href="">구매</a> </span> 
+                </li>    
+                <li>
+                    <a href="#">설탕<img src="#" alt="상세보기"></a>
+                    <span class="right">30g<a href="">구매</a> </span> 
+                </li>
+                <li>
+                    <a href="#">드라이이스트<img src="#" alt="상세보기"></a>
+                    <span class="right">4g<a href="">구매</a> </span> 
+                </li>
+            </ul>
+        </section> 
+        <!-- 재료 끝 -->
+        <!-- 마스카포네 -->
+        <section>
+            <h3>[마스카포네크림]</h3>
+            <ul> 
+                <li>
+                    <a href="#">마스카포네치즈<img src="#" alt="상세보기"></a>
+                    <span class="right">60g<a href="">구매</a> </span> 
+                </li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!-- 조리순서 시작! -->
+    <!-- 오른쪽 아이콘 -->
+    <div class="order_cooking"> 
+        <h2>조리순서<span>Steps</span></h2>
+        <div class="step_view">
+            <a href="#"><img src="#" alt="이미지 크게보기"></a>
+            <a href="#"><img src="#" alt="텍스트보기"></a>
+            <a href="#"><img src="#" alt="작게보기"></a>
+        </div>
+    <!-- 조리순서 1번 -->
+    <ol class="step_contents">
+        <li>   
+            <div class="step_text">
+                <p>반죽기에 우유, 생크림, 달걀, 이스트, 설탕, 소금, 밀가루를 넣고 저속으로 돌려요.</p>
+                <div class="step_desc">
+                    <a href="#">반죽기</a>
+                    <p>우유와 생크림은 따뜻하게 데워요</p>
+                    <a href="#">쿠진아트 홈베이킹 5.2L 마스터 반죽기 SM-50KR</a>
+                </div>
+            </div>
+            <div class="step_img"><img src="#" alt=""></div>
+        </li>
+    </ol>
+<!-- 
+                <li><img src="#" alt="반죽기">반죽기</li>
+                <li><img src="#" alt="전구">우유와 생크림은 따뜻하게 데워요</li>
+                <li><img src="#" alt="쇼핑카드"></li> -->
+    </div> <!-- order_cooking 끝 -->
+</body>
+</html>

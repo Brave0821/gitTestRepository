@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="#" method="post" id="user_join">
+        <fieldset>
+            <legend>회원가입</legend>
+            <input type="text" name="user_id" class="user_id" placeholder="아이디" maxlength="10"><br>
+            <input type="text" name="user_pw" class="user_pw" placeholder="비밀번호" maxlength="10"><br>
+            <!-- span으로 한번에 묶기. -->
+            <span>성별 :</span>
+            <span>남</span>
+            <label><input type="radio" value="male" name="gender"></label>
+            <span>여</span>
+            <label><input type="radio" value="female" name="gender"></label><br>
+            <!-- span으로 한번에 묶기. -->
+            <span>정보 저장 동의 :</span>
+            <span>동의함</span>
+            <label><input type="radio" value="agree_y" name="agree"></label>
+            <span>동의안함</span>
+            <label><input type="radio" value="agree_n" name="agree"></label><br>
+            <!-- ckbox 여러 개 사용할떄. -->
+            관심사<span>(2개 이상 선택하세요)</span>
+            <span>영화</span>
+            <label><input type="checkbox" value="movie" name="hobby"></label>
+            <span>운동</span>
+            <label><input type="checkbox" value="exercise" name="hobby"></label>
+            <span>독서</span>
+            <label><input type="checkbox" value="book" name="hobby"></label><br>
+            <!-- file -->
+            <input type="file" accept="image/*" value="user_photo"><br>
+            <button type="submit" id="join_yes">가입</button>
+            <button type="reset" id="join_no">가입취소</button>
+            <hr>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- 카멜버젼도 만들어보기. 
+
+<span>으로 한번에 묶어보기 
+<span>
+    남
+    <lable><input text="" name="">lable
+</span>
+
+
+-->
